@@ -51,6 +51,7 @@ object Form1: TForm1
       'Naam'
       'Achternaam'
       'Straat'
+      'Postcode'
       'Woonplaats'
     )
     OnChange = ComboBox1Change
@@ -91,6 +92,11 @@ object Form1: TForm1
         Name = 'Straat'
         DataType = ftString
         Size = 20
+      end    
+      item
+        Name = 'Postcode'
+        DataType = ftString
+        Size = 7
       end    
       item
         Name = 'Woonplaats'
