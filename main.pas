@@ -64,6 +64,7 @@ end;
 procedure TForm1.DBGrid1TitleClick(Column: TColumn);
 begin
   BufDataset1.IndexFieldNames := Column.FieldName;
+  ComboBox1.Text := Column.FieldName;
   BufDataset1.First;
 end;
 

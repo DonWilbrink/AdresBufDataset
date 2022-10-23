@@ -20,6 +20,7 @@ type
     DBNavigator1: TDBNavigator;
     Label1: TLabel;
     procedure ComboBox1Change(Sender: TObject);
+    procedure DBGrid1TitleClick(Column: TColumn);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
   private
@@ -57,6 +58,12 @@ end;
 procedure TForm1.ComboBox1Change(Sender: TObject);
 begin
   BufDataset1.IndexFieldNames := Combobox1.Text;
+  BufDataset1.First;
+end;
+
+procedure TForm1.DBGrid1TitleClick(Column: TColumn);
+begin
+  BufDataset1.IndexFieldNames := Column.FieldName;
   BufDataset1.First;
 end;
 
